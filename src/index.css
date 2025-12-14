@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   Base Styles - Cybersecurity/Terminal Aesthetic
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-neon: #00ff9d;
+  --color-neon-alt: #00d4ff;
+  --color-surface: #111111;
+  --color-border: #1a1a1a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-neon) var(--color-bg);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-neon);
+  border-radius: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Custom Animations
+   ───────────────────────────────────────────────────────────── */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--color-neon), 0 0 10px var(--color-neon);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--color-neon), 0 0 20px var(--color-neon), 0 0 30px var(--color-neon);
+  }
+}
+
+@keyframes terminal-blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-terminal-blink {
+  animation: terminal-blink 1s step-end infinite;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Typography Enhancements
+   ───────────────────────────────────────────────────────────── */
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-neon) 0%, var(--color-neon-alt) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Selection Styling
+   ───────────────────────────────────────────────────────────── */
+
+::selection {
+  background: var(--color-neon);
+  color: var(--color-bg);
+}
