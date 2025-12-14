@@ -23,8 +23,8 @@ const Section = ({ children, id, className = '', variant = 'default' }: SectionP
         h-screen w-full relative
         snap-start snap-always
         flex flex-col items-center justify-center
-        px-6 py-12 md:px-12 lg:px-24
-        overflow-hidden
+        px-4 py-6 sm:px-6 sm:py-12 md:px-12 lg:px-24
+        overflow-hidden overflow-y-auto
         ${className}
       `}
     >

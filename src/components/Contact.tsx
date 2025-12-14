@@ -61,7 +61,7 @@ const SocialCard = ({ social }: { social: SocialLink }) => {
         relative group
         flex flex-col items-center justify-center
         bg-[#111111] border border-[#1a1a1a]
-        rounded-xl p-6
+        rounded-xl p-4 sm:p-6
         cursor-pointer overflow-hidden
         transition-colors duration-300
       "
@@ -83,22 +83,22 @@ const SocialCard = ({ social }: { social: SocialLink }) => {
       
       {/* Icon */}
       <motion.div 
-        className="relative z-10 text-gray-400 group-hover:text-white transition-colors mb-3"
+        className="relative z-10 text-gray-400 group-hover:text-white transition-colors mb-2 sm:mb-3"
         style={{ color: 'inherit' }}
         whileHover={{ color: social.color }}
       >
-        <span className="group-hover:drop-shadow-lg" style={{ color: 'inherit' }}>
+        <span className="group-hover:drop-shadow-lg [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6" style={{ color: 'inherit' }}>
           {social.icon}
         </span>
       </motion.div>
 
       {/* Name */}
-      <span className="relative z-10 font-mono text-sm font-semibold text-white mb-1">
+      <span className="relative z-10 font-mono text-xs sm:text-sm font-semibold text-white mb-0.5 sm:mb-1">
         {social.name}
       </span>
 
       {/* Username */}
-      <span className="relative z-10 font-mono text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
+      <span className="relative z-10 font-mono text-[10px] sm:text-xs text-gray-500 group-hover:text-gray-400 transition-colors truncate max-w-full">
         {social.username}
       </span>
     </motion.a>
@@ -111,7 +111,7 @@ const Contact = () => {
   return (
     <Section id="contact" className="relative">
       <motion.div 
-        className="text-center max-w-3xl"
+        className="text-center max-w-3xl px-2"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -119,7 +119,7 @@ const Contact = () => {
       >
         {/* Terminal Command */}
         <motion.div 
-          className="inline-flex items-center gap-2 mb-6 font-mono text-sm text-gray-500"
+          className="inline-flex items-center gap-2 mb-4 sm:mb-6 font-mono text-xs sm:text-sm text-gray-500"
           variants={fadeInUp}
         >
           <span className="text-[#00ff9d]">❯</span>
@@ -128,7 +128,7 @@ const Contact = () => {
         
         {/* Title */}
         <motion.h2 
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-white"
           variants={fadeInUp}
         >
           Get In Touch
@@ -137,21 +137,21 @@ const Contact = () => {
         
         {/* Description */}
         <motion.p 
-          className="font-mono text-gray-400 mb-8 max-w-xl mx-auto"
+          className="font-mono text-xs sm:text-sm text-gray-400 mb-6 sm:mb-8 max-w-xl mx-auto"
           variants={fadeInUp}
         >
-          // Ready to collaborate on your next project? <br />
-          // Whether it's security testing or building applications, let's talk.
+          // Ready to collaborate on your next project? <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>// Whether it's security testing or building applications, let's talk.
         </motion.p>
 
         {/* Email Button */}
         <motion.a
           href="mailto:mouadboudhar4@gmail.com"
           className="
-            inline-flex items-center gap-3
-            px-8 py-4 rounded-lg mb-12
+            inline-flex items-center gap-2 sm:gap-3
+            px-5 sm:px-8 py-3 sm:py-4 rounded-lg mb-8 sm:mb-12
             bg-[#00ff9d] text-[#0a0a0a]
-            font-mono font-semibold
+            font-mono font-semibold text-sm sm:text-base
             transition-all duration-300
           "
           variants={fadeInUp}
@@ -171,12 +171,12 @@ const Contact = () => {
           className="w-full"
           variants={fadeInUp}
         >
-          <p className="font-mono text-xs text-gray-600 mb-6">
+          <p className="font-mono text-[10px] sm:text-xs text-gray-600 mb-4 sm:mb-6">
             // Or find me on social media
           </p>
           
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 max-w-2xl mx-auto"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -190,15 +190,15 @@ const Contact = () => {
 
         {/* Footer */}
         <motion.div 
-          className="mt-16 pt-8 border-t border-[#1a1a1a]"
+          className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-[#1a1a1a]"
           variants={fadeInUp}
         >
-          <p className="font-mono text-xs text-gray-600">
+          <p className="font-mono text-[10px] sm:text-xs text-gray-600">
             <span className="text-[#00ff9d]">©</span> {new Date().getFullYear()} Your Name. 
-            <span className="mx-2">|</span>
+            <span className="mx-1 sm:mx-2">|</span>
             Built with <span className="text-[#00d4ff]">React</span> + <span className="text-[#00ff9d]">Tailwind</span>
           </p>
-          <p className="font-mono text-xs text-gray-700 mt-2">
+          <p className="font-mono text-[10px] sm:text-xs text-gray-700 mt-1 sm:mt-2">
             {'// Designed & developed with <3'}
           </p>
         </motion.div>

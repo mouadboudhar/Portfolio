@@ -18,7 +18,7 @@ const Hero = () => {
       >
         {/* Terminal Prompt */}
         <motion.div 
-          className="mb-6 font-mono text-sm text-gray-500"
+          className="mb-4 sm:mb-6 font-mono text-xs sm:text-sm text-gray-500"
           variants={fadeInDown}
         >
           <span className="text-[#00ff9d]">guest@portfolio</span>
@@ -30,7 +30,7 @@ const Hero = () => {
         
         {/* Name */}
         <motion.h1 
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-2 sm:mb-4 tracking-tight"
           variants={fadeInUp}
         >
           <span className="text-white">Mouad </span>
@@ -41,26 +41,26 @@ const Hero = () => {
         
         {/* Title */}
         <motion.div 
-          className="flex items-center justify-center gap-2 mb-8"
+          className="flex items-center justify-center gap-2 mb-6 sm:mb-8"
           variants={fadeInUp}
         >
-          <span className="w-2 h-2 rounded-full bg-[#00ff9d] animate-pulse" />
-          <p className="font-mono text-lg md:text-xl text-gray-400">
+          <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ff9d] animate-pulse" />
+          <p className="font-mono text-sm sm:text-lg md:text-xl text-gray-400">
             Cybersecurity Pentester & Full Stack Developer
           </p>
         </motion.div>
         
         {/* CTA Buttons */}
         <motion.div 
-          className="flex items-center justify-center gap-4 flex-wrap"
+          className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap"
           variants={staggerContainer}
         >
           <motion.a
             href="#cyber-skills"
             className="
-              px-6 py-3 rounded-lg
+              px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg
               bg-[#00ff9d]/10 border border-[#00ff9d]/30
-              text-[#00ff9d] font-mono text-sm
+              text-[#00ff9d] font-mono text-xs sm:text-sm
               transition-all duration-300
             "
             variants={staggerItem}
@@ -76,9 +76,9 @@ const Hero = () => {
           <motion.a
             href="#contact"
             className="
-              px-6 py-3 rounded-lg
+              px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg
               bg-[#111111] border border-[#1a1a1a]
-              text-gray-300 font-mono text-sm
+              text-gray-300 font-mono text-xs sm:text-sm
               transition-all duration-300
             "
             variants={staggerItem}
@@ -96,20 +96,20 @@ const Hero = () => {
       
       {/* Scroll Indicator - Positioned at bottom of viewport */}
       <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20"
+        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 sm:gap-2 z-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.6 }}
       >
-        <span className="font-mono text-xs text-gray-500">scroll down</span>
+        <span className="font-mono text-[10px] sm:text-xs text-gray-500">scroll down</span>
         <motion.div 
           className="flex flex-col items-center"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="w-5 h-8 rounded-full border-2 border-[#00ff9d]/50 flex justify-center pt-1">
+          <div className="w-4 h-6 sm:w-5 sm:h-8 rounded-full border-2 border-[#00ff9d]/50 flex justify-center pt-1">
             <motion.div 
-              className="w-1 h-2 rounded-full bg-[#00ff9d]"
+              className="w-0.5 sm:w-1 h-1.5 sm:h-2 rounded-full bg-[#00ff9d]"
               animate={{ opacity: [1, 0.3, 1], y: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             />

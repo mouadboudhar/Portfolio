@@ -63,7 +63,7 @@ const TypeBadge = ({ type }: { type: DevProject['type'] }) => {
   };
 
   return (
-    <span className={`px-3 py-1 text-xs font-mono rounded-full border ${config[type].color}`}>
+    <span className={`px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-xs font-mono rounded-full border ${config[type].color}`}>
       {config[type].label}
     </span>
   );
@@ -96,17 +96,17 @@ const ProjectCard = ({ project, index }: { project: DevProject; index: number })
       {/* Compact Header with Icon */}
       <div 
         className={`
-          h-16 w-full
+          h-12 sm:h-16 w-full
           bg-gradient-to-br 
           ${isEven 
             ? 'from-[#00d4ff]/10 via-[#111111] to-[#00ff9d]/5' 
             : 'from-[#00ff9d]/10 via-[#111111] to-[#00d4ff]/5'
           }
-          flex items-center justify-between px-4
+          flex items-center justify-between px-3 sm:px-4
           border-b border-[#1a1a1a]
         `}
       >
-        <span className="text-2xl opacity-50">
+        <span className="text-lg sm:text-2xl opacity-50">
           {project.type === 'web' && '🌐'}
           {project.type === 'app' && '📱'}
           {project.type === 'api' && '⚡'}
@@ -139,10 +139,10 @@ const ProjectCard = ({ project, index }: { project: DevProject; index: number })
       </div>
 
       {/* Content */}
-      <div className="relative z-10 p-4">
+      <div className="relative z-10 p-3 sm:p-4">
         {/* Title & Badge */}
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="font-mono text-sm font-semibold text-white group-hover:text-[#00d4ff] transition-colors">
+        <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+          <h3 className="font-mono text-xs sm:text-sm font-semibold text-white group-hover:text-[#00d4ff] transition-colors truncate mr-2">
             {project.title}
           </h3>
           <TypeBadge type={project.type} />
@@ -176,18 +176,18 @@ const DevProjects = () => {
     <Section id="dev-projects" variant="dev">
       {/* Section Header */}
       <motion.div 
-        className="w-full max-w-5xl mb-6 text-center"
+        className="w-full max-w-5xl mb-4 sm:mb-6 text-center"
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="inline-flex items-center gap-2 mb-2 font-mono text-sm text-gray-500">
+        <div className="inline-flex items-center gap-2 mb-1.5 sm:mb-2 font-mono text-xs sm:text-sm text-gray-500">
           <span className="text-[#00d4ff]">$</span>
           <span>npm run showcase --projects</span>
         </div>
         
-        <h2 className="font-mono text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">
+        <h2 className="font-mono text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">
           Development Projects
           <span className="animate-pulse text-[#00d4ff]">_</span>
         </h2>
@@ -195,7 +195,7 @@ const DevProjects = () => {
 
       {/* Compact Projects Grid */}
       <motion.div 
-        className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4"
+        className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"

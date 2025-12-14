@@ -100,7 +100,7 @@ const SkillChip = ({ skill, color }: { skill: DevSkill; color: string }) => {
       className="
         relative group
         bg-[#111111] border border-[#1a1a1a]
-        rounded-lg px-4 py-2
+        rounded-lg px-2.5 sm:px-4 py-1.5 sm:py-2
         cursor-default overflow-hidden
       "
       variants={popIn}
@@ -119,7 +119,7 @@ const SkillChip = ({ skill, color }: { skill: DevSkill; color: string }) => {
       />
       
       <span 
-        className="relative z-10 font-mono text-sm text-gray-300 group-hover:text-white transition-colors"
+        className="relative z-10 font-mono text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors"
       >
         {skill.name}
       </span>
@@ -137,9 +137,9 @@ const CategoryCard = ({ category, index }: { category: DevCategory; index: numbe
       custom={index}
     >
       {/* Category Header */}
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-2xl">{category.icon}</span>
-        <h3 className="font-mono text-lg font-semibold text-white">
+      <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+        <span className="text-lg sm:text-2xl">{category.icon}</span>
+        <h3 className="font-mono text-sm sm:text-lg font-semibold text-white">
           {category.name}
         </h3>
         <div 
@@ -152,7 +152,7 @@ const CategoryCard = ({ category, index }: { category: DevCategory; index: numbe
 
       {/* Skills Grid */}
       <motion.div 
-        className="flex flex-wrap gap-2"
+        className="flex flex-wrap gap-1.5 sm:gap-2"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
@@ -173,29 +173,29 @@ const DevSkills = () => {
     <Section id="dev-skills" variant="dev">
       {/* Section Header */}
       <motion.div 
-        className="w-full max-w-5xl mb-12"
+        className="w-full max-w-5xl mb-6 sm:mb-12"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >
         {/* Terminal Window */}
-        <div className="inline-flex items-center gap-2 bg-[#111111] border border-[#1a1a1a] rounded-t-lg px-4 py-2">
-          <span className="w-3 h-3 rounded-full bg-[#ff5f56]" />
-          <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
-          <span className="w-3 h-3 rounded-full bg-[#27ca40]" />
-          <span className="ml-2 font-mono text-xs text-gray-500">dev_skills.json</span>
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#111111] border border-[#1a1a1a] rounded-t-lg px-3 sm:px-4 py-1.5 sm:py-2">
+          <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#ff5f56]" />
+          <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#ffbd2e]" />
+          <span className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[#27ca40]" />
+          <span className="ml-1 sm:ml-2 font-mono text-[10px] sm:text-xs text-gray-500">dev_skills.json</span>
         </div>
         
-        <div className="bg-[#0d0d0d] border border-t-0 border-[#1a1a1a] rounded-b-lg rounded-tr-lg p-6">
-          <div className="flex items-center gap-2 mb-2">
+        <div className="bg-[#0d0d0d] border border-t-0 border-[#1a1a1a] rounded-b-lg rounded-tr-lg p-4 sm:p-6">
+          <div className="flex items-center gap-2 mb-1 sm:mb-2">
             <span className="text-[#00d4ff] font-mono">{'{'}</span>
-            <h2 className="font-mono text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight">
+            <h2 className="font-mono text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight">
               Development Skills
               <span className="animate-pulse text-[#00d4ff]">_</span>
             </h2>
           </div>
-          <p className="font-mono text-sm text-gray-500 ml-5">
+          <p className="font-mono text-xs sm:text-sm text-gray-500 ml-3 sm:ml-5">
             "description": "Full Stack Developer Toolkit"
           </p>
         </div>
@@ -203,7 +203,7 @@ const DevSkills = () => {
 
       {/* Skills Categories */}
       <motion.div 
-        className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"

@@ -182,7 +182,7 @@ const CyberSkills = () => {
 
       {/* Skills Grid */}
       <motion.div 
-        className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
