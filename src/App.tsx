@@ -10,7 +10,7 @@ import CyberProjects from './components/CyberProjects';
 import DevSkills from './components/DevSkills';
 import DevProjects from './components/DevProjects';
 import Contact from './components/Contact';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
