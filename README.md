@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+﻿#  Portfolio | Cybersecurity & Full Stack Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website with a terminal-inspired aesthetic, smooth scroll snapping, and dynamic animations. Built to showcase skills and projects across both **Cybersecurity/Pentesting** and **Full Stack Development**.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-06B6D4?logo=tailwindcss&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF0055?logo=framer&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## React Compiler
+- **Two-Zone Architecture**: Separate sections highlighting Cybersecurity and Development expertise
+- **Terminal Aesthetic**: Hacker-inspired design with command prompts and monospace fonts
+- **Scroll Snapping**: Smooth full-page vertical scrolling between sections
+- **Framer Motion Animations**: Fade-ins, staggered lists, and hover effects
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop
+- **Dark Theme**: Eye-friendly dark mode with accent colors
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Sections
 
-## Expanding the ESLint configuration
+1. **Hero** - Introduction with terminal-style greeting
+2. **Cyber Skills** - Reconnaissance, Web Exploitation, Network Security, Scripting
+3. **Cyber Projects** - CTF writeups, security tools, pentest reports
+4. **Dev Skills** - Languages, Frontend, Backend, Databases, DevOps
+5. **Dev Projects** - Web apps, APIs, mobile applications
+6. **Contact** - Email and social media links (GitHub, LinkedIn, Twitter, Bluesky)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+##  Quick Start
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Install dependencies
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+##  Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Category | Technologies |
+|----------|-------------|
+| **Frontend** | React 19, TypeScript, Tailwind CSS 4 |
+| **Animations** | Framer Motion |
+| **Build Tool** | Vite 7 |
+| **Icons** | React Icons |
+| **Analytics** | Vercel Speed Insights |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+##  Project Structure
+
 ```
+src/
+ components/
+    Hero.tsx           # Introduction section
+    CyberSkills.tsx    # Cybersecurity skills
+    CyberProjects.tsx  # Security projects showcase
+    DevSkills.tsx      # Development skills
+    DevProjects.tsx    # Dev projects showcase
+    Contact.tsx        # Contact & social links
+    Section.tsx        # Reusable section wrapper
+    ScrollContainer.tsx # Scroll snap container
+    animations.ts      # Framer Motion variants
+ App.tsx                # Main app component
+ main.tsx               # Entry point
+ index.css              # Global styles
+```
+
+##  Customization
+
+To personalize the portfolio:
+
+1. **Update personal info** in `Hero.tsx` (name, title)
+2. **Modify skills** in `CyberSkills.tsx` and `DevSkills.tsx`
+3. **Add your projects** in `CyberProjects.tsx` and `DevProjects.tsx`
+4. **Update social links** in `Contact.tsx`
+5. **Change accent colors** by editing the Tailwind classes (`#00ff9d` for cyber, `#00d4ff` for dev)
+
+##  License
+
+MIT License - Feel free to use this template for your own portfolio!
+
+---
+
+<p align="center">
+  <sub>Built with  using React + Tailwind + Framer Motion</sub>
+</p>

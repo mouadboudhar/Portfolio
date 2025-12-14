@@ -10,6 +10,7 @@ import CyberProjects from './components/CyberProjects';
 import DevSkills from './components/DevSkills';
 import DevProjects from './components/DevProjects';
 import Contact from './components/Contact';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           Connect and collaborate
           ═══════════════════════════════════════════════════════════ */}
       <Contact />
+      <SpeedInsights />
     </ScrollContainer>
   );
 }
