@@ -194,7 +194,7 @@ const Contact = () => {
           variants={fadeInUp}
         >
           <p className="font-mono text-[10px] sm:text-xs text-gray-600">
-            <span className="text-[#00ff9d]">©</span> {new Date().getFullYear()} Your Name. 
+            <span className="text-[#00ff9d]">©</span> {new Date().getFullYear()} Mouad Boudhar. 
             <span className="mx-1 sm:mx-2">|</span>
             Built with <span className="text-[#00d4ff]">React</span> + <span className="text-[#00ff9d]">Tailwind</span>
           </p>
