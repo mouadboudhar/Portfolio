@@ -123,7 +123,7 @@ const ProjectCard = ({ project }: { project: CyberProject }) => {
         </h3>
 
         {/* Description */}
-        <p className="font-mono text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 leading-relaxed line-clamp-3 sm:line-clamp-none">
+        <p className="font-mono text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 leading-relaxed line-clamp-3 sm:line-clamp-none max-sm:line-clamp-1">
           {project.description}
         </p>
 

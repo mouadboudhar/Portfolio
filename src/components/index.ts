@@ -14,8 +14,5 @@ export { default as DevSkills } from './DevSkills';
 export { default as DevProjects } from './DevProjects';
 export { default as Contact } from './Contact';
 
-// Legacy (can be removed)
-export { default as Skills } from './Skills';
-
 // Animation Utilities
 export * from './animations';

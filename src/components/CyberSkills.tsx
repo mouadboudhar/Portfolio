@@ -77,7 +77,7 @@ const LevelBadge = ({ level }: { level: CyberSkill['level'] }) => {
   };
 
   return (
-    <span className={`px-2 py-0.5 text-[10px] font-mono rounded border ${colors[level]}`}>
+    <span className={`px-2 py-0.5 text-[10px] font-mono rounded border max-sm:hidden ${colors[level]}`}>
       {level}
     </span>
   );
@@ -92,7 +92,7 @@ const SkillCard = ({ skill }: { skill: CyberSkill }) => {
         flex items-center justify-between
         bg-[#111111] border border-[#1a1a1a]
         rounded-lg px-4 py-3
-        cursor-default
+        cursor-default max-sm:px-3 max-sm:py-2
       "
       variants={staggerItem}
       initial="rest"
@@ -131,7 +131,7 @@ const CategoryCard = ({ category, index }: { category: CyberCategory; index: num
 
       {/* Skills List */}
       <motion.div 
-        className="grid gap-2"
+        className="grid gap-2 max-sm:gap-1 grid-cols-2"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"

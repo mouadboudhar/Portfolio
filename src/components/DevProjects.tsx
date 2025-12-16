@@ -73,7 +73,7 @@ const TypeBadge = ({ type }: { type: DevProject['type'] }) => {
 
 const ProjectCard = ({ project, index }: { project: DevProject; index: number }) => {
   const isEven = index % 2 === 0;
-  
+
   return (
     <motion.div
       className="
@@ -88,18 +88,18 @@ const ProjectCard = ({ project, index }: { project: DevProject; index: number })
       animate="rest"
     >
       {/* Animated Border Glow */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 rounded-lg pointer-events-none"
         variants={cardHover}
       />
 
       {/* Compact Header with Icon */}
-      <div 
+      <div
         className={`
           h-12 sm:h-16 w-full
           bg-gradient-to-br 
-          ${isEven 
-            ? 'from-[#00d4ff]/10 via-[#111111] to-[#00ff9d]/5' 
+          ${isEven
+            ? 'from-[#00d4ff]/10 via-[#111111] to-[#00ff9d]/5'
             : 'from-[#00ff9d]/10 via-[#111111] to-[#00d4ff]/5'
           }
           flex items-center justify-between px-3 sm:px-4
@@ -149,14 +149,14 @@ const ProjectCard = ({ project, index }: { project: DevProject; index: number })
         </div>
 
         {/* Description */}
-        <p className="font-mono text-[11px] text-gray-400 mb-2 leading-relaxed line-clamp-2">
+        <p className="max-sm:line-clamp-1 font-mono text-[11px] text-gray-400 mb-2 leading-relaxed line-clamp-3">
           {project.description}
         </p>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-1">
           {project.tags.slice(0, 3).map((tag) => (
-            <span 
+            <span
               key={tag}
               className="px-1.5 py-0.5 text-[9px] font-mono text-gray-500 bg-[#0a0a0a] rounded"
             >
@@ -175,7 +175,7 @@ const DevProjects = () => {
   return (
     <Section id="dev-projects" variant="dev">
       {/* Section Header */}
-      <motion.div 
+      <motion.div
         className="w-full max-w-5xl mb-4 sm:mb-6 text-center"
         variants={fadeInUp}
         initial="hidden"
@@ -186,7 +186,7 @@ const DevProjects = () => {
           <span className="text-[#00d4ff]">$</span>
           <span>npm run showcase --projects</span>
         </div>
-        
+
         <h2 className="font-mono text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 sm:mb-2">
           Development Projects
           <span className="animate-pulse text-[#00d4ff]">_</span>
@@ -194,7 +194,7 @@ const DevProjects = () => {
       </motion.div>
 
       {/* Compact Projects Grid */}
-      <motion.div 
+      <motion.div
         className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"
         variants={staggerContainer}
         initial="hidden"

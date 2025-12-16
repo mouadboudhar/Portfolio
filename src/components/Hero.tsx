@@ -44,8 +44,8 @@ const Hero = () => {
           className="flex items-center justify-center gap-2 mb-6 sm:mb-8"
           variants={fadeInUp}
         >
-          <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#00ff9d] animate-pulse" />
-          <p className="font-mono text-sm sm:text-lg md:text-xl text-gray-400">
+          <span className="w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-[#00ff9d] animate-pulse" />
+          <p className="font-mono text-xs sm:text-lg md:text-xl text-gray-400">
             Cybersecurity Pentester & Full Stack Developer
           </p>
         </motion.div>

@@ -152,7 +152,7 @@ const CategoryCard = ({ category, index }: { category: DevCategory; index: numbe
 
       {/* Skills Grid */}
       <motion.div 
-        className="flex flex-wrap gap-1.5 sm:gap-2"
+        className="flex flex-wrap gap-1.5 sm:gap-2 max-sm:gap-1"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
